@@ -13,3 +13,9 @@ Feature: Automate the practice website - login functionality
 	Given I launch the test automation website
 	When I navigate to the checkbox page
 	And I should check both the checkboxes
+	
+	 @Dropdown
+  Scenario: Dropdown list - automate the practice website
+	Given I launch the test automation website
+	When I navigate to the dropdown page
+	And I should select Option1 from the dropdown list

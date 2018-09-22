@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features", 
 					glue = { "steps" },					
-					tags = {"@Checkbox"},
+					tags = {"@Dropdown"},
 					plugin= {"pretty", "html:target/cucumber"},
 					monochrome = false)
 public class TestRunner {

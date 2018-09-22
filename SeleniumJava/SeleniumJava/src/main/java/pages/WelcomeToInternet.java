@@ -41,6 +41,9 @@ public class WelcomeToInternet {
 
 	@FindBy(css = "a[href='/checkboxes']")
 	WebElement checkboxesLink;
+	
+	@FindBy(css = "a[href='/dropdown']" )
+	WebElement dropdownLink;
 
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
@@ -52,6 +55,10 @@ public class WelcomeToInternet {
 
 	public void clickCheckboxesLink() {
 		checkboxesLink.click();
+	}
+	
+	public void clickDropdownLink() {
+		dropdownLink.click();
 	}
 
 	public void getAbTestingText() {
