@@ -1,7 +1,18 @@
 package pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -12,23 +23,51 @@ public class WelcomeToInternet {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(css ="a[href='/abtest']")
+
+	@FindBy(css = "a[href='/abtest']")
 	WebElement abTestingLink;
-	
-	@FindBy(css ="a[href='/basic_auth']")
+
+	@FindBy(css = "a[href='/basic_auth']")
 	WebElement basicAuthLink;
-	
-	@FindBy(css ="a[href='/broken_images']")
+
+	@FindBy(css = "a[href='/broken_images']")
 	WebElement brokenImageLink;
-	
-	@FindBy(css ="a[href='/challenging_dom']")
+
+	@FindBy(css = "a[href='/challenging_dom']")
 	WebElement challengingDomLink;
-	
+
+	@FindBy(css = ".example>h3")
+	WebElement abTestText;
+
+	@FindBy(css = "a[href='/checkboxes']")
+	WebElement checkboxesLink;
+
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
 	}
-	
-	
-	
+
+	public void clickOnabTestingLink() {
+		abTestingLink.click();
+	}
+
+	public void clickCheckboxesLink() {
+		checkboxesLink.click();
+	}
+
+	public void getAbTestingText() {
+
+		System.out.println(abTestText.getText());
+	}
+
+	public void launchURL() {
+		driver.get("http://the-internet.herokuapp.com/");
+		System.out.println("Launched");
+
+	}
+
+	public void loginParams() {
+		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+		driver.manage().window().maximize();
+	}
+
 }
