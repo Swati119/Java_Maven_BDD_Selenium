@@ -24,3 +24,9 @@ Feature: Automate the practice website
     When I navigate to the context menu page
     And I should right click and select option
     Then I should see a javascript pop messsage
+
+  @xml
+  Scenario: Read xml - automate the practice website
+    Given I launch the test automation website
+    When I navigate to the forgot password page
+    And I send email from the xml

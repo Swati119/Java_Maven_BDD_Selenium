@@ -6,6 +6,7 @@ import pages.BasicAuth;
 import pages.Checkboxes;
 import pages.ContextMenu;
 import pages.Dropdown;
+import pages.ForgotPwd;
 import pages.WelcomeToInternet;
 
 public class WelcomeToInternetSteps extends BaseSteps {
@@ -14,6 +15,7 @@ public class WelcomeToInternetSteps extends BaseSteps {
 	Checkboxes check = new Checkboxes(driver);
 	Dropdown drop = new Dropdown(driver);
 	ContextMenu context = new ContextMenu(driver);
+	ForgotPwd frgtPwd = new ForgotPwd(driver);
 	
 	@When("^I login with valid credentials$")
 	public void i_login_with_valid_credentials() throws Throwable {
@@ -61,6 +63,15 @@ public class WelcomeToInternetSteps extends BaseSteps {
 		context.handleJSPopup();
 	}
 	
+	@When("^I navigate to the forgot password page$")
+	public void i_navigate_to_forgot_password_page() throws Throwable {
+		welcomePage.clickForgotPwdLink();
+	}
+
+	@Then("^I send email from the xml$")
+	public void i_send_email_from_xml() throws Throwable {
+		frgtPwd.fillEmail();
+	}
 	
 	
 }

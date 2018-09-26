@@ -47,6 +47,9 @@ public class WelcomeToInternet {
 	
 	@FindBy(css = "a[href='/context_menu']")
 	WebElement contextLink;
+	
+	@FindBy(css = "a[href='/forgot_password']")
+	WebElement forgotPwdLink;
 
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
@@ -67,6 +70,10 @@ public class WelcomeToInternet {
 	public void clickContextLink() {
 		contextLink.click();
 	}
+	
+	public void clickForgotPwdLink() {
+		forgotPwdLink.click();
+	}
 
 	public void getAbTestingText() {
 
@@ -84,4 +91,5 @@ public class WelcomeToInternet {
 		driver.manage().window().maximize();
 	}
 
+	
 }
