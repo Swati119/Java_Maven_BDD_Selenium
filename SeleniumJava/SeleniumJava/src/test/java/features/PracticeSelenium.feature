@@ -1,6 +1,4 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-Feature: Automate the practice website - login functionality
+Feature: Automate the practice website
 
   @BasicAuth
   Scenario: Basic authorization - automate the practice website
@@ -10,12 +8,19 @@ Feature: Automate the practice website - login functionality
 
   @Checkbox
   Scenario: Checkboxes - automate the practice website
-	Given I launch the test automation website
-	When I navigate to the checkbox page
-	And I should check both the checkboxes
-	
-	 @Dropdown
+    Given I launch the test automation website
+    When I navigate to the checkbox page
+    And I should check both the checkboxes
+
+  @Dropdown
   Scenario: Dropdown list - automate the practice website
-	Given I launch the test automation website
-	When I navigate to the dropdown page
-	And I should select Option1 from the dropdown list
+    Given I launch the test automation website
+    When I navigate to the dropdown page
+    And I should select Option1 from the dropdown list
+
+  @RightClick
+  Scenario: Right click - automate the practice website
+    Given I launch the test automation website
+    When I navigate to the context menu page
+    And I should right click and select option
+    Then I should see a javascript pop messsage

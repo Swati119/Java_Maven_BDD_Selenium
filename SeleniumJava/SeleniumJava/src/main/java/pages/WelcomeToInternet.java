@@ -44,6 +44,9 @@ public class WelcomeToInternet {
 	
 	@FindBy(css = "a[href='/dropdown']" )
 	WebElement dropdownLink;
+	
+	@FindBy(css = "a[href='/context_menu']")
+	WebElement contextLink;
 
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
@@ -59,6 +62,10 @@ public class WelcomeToInternet {
 	
 	public void clickDropdownLink() {
 		dropdownLink.click();
+	}
+	
+	public void clickContextLink() {
+		contextLink.click();
 	}
 
 	public void getAbTestingText() {

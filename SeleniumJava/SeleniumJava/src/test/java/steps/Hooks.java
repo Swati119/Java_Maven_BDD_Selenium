@@ -1,12 +1,14 @@
 package steps;
 
+import java.io.IOException;
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hooks {
 	BaseSteps bs = new BaseSteps();
 @Before
-public void beforeFunction() {
+public void beforeFunction() throws IOException {
 	bs.initiateDriver();
 }
 

@@ -4,6 +4,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.BasicAuth;
 import pages.Checkboxes;
+import pages.ContextMenu;
 import pages.Dropdown;
 import pages.WelcomeToInternet;
 
@@ -12,6 +13,7 @@ public class WelcomeToInternetSteps extends BaseSteps {
 	BasicAuth basicAuth = new BasicAuth(driver);
 	Checkboxes check = new Checkboxes(driver);
 	Dropdown drop = new Dropdown(driver);
+	ContextMenu context = new ContextMenu(driver);
 	
 	@When("^I login with valid credentials$")
 	public void i_login_with_valid_credentials() throws Throwable {
@@ -43,6 +45,22 @@ public class WelcomeToInternetSteps extends BaseSteps {
 	public void i_should_select_option_from_dropdown() throws Throwable {
 		drop.selectOption();
 	}
+	
+	@Then("^I navigate to the context menu page$")
+	public void i_navigate_to_context_menu_page() throws Throwable {
+		welcomePage.clickContextLink();
+	}
+	
+	@When("^I should right click and select option$")
+	public void i_right_click_select_option() throws Throwable {
+		context.rightClickContext();
+	}
+
+	@Then("^I should see a javascript pop messsage$")
+	public void i_should_see_js_popup() throws Throwable {
+		context.handleJSPopup();
+	}
+	
 	
 	
 }
