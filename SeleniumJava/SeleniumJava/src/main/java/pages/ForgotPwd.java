@@ -10,11 +10,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.xml.sax.SAXException;
 
+import utils.JsonUtils;
 import utils.XmlUtils;
 
 public class ForgotPwd {
 	private WebDriver driver;
 	XmlUtils xUtils = new XmlUtils();
+	JsonUtils jUtils = new JsonUtils();
 
 	public ForgotPwd(WebDriver driver) {
 		this.driver = driver;
@@ -24,7 +26,11 @@ public class ForgotPwd {
 	@FindBy(css = "input[name='email']")
 	WebElement emailBox;
 
-	public void fillEmail() throws IOException, ParserConfigurationException, SAXException, InterruptedException {
+	public void fillEmailXml() throws IOException, ParserConfigurationException, SAXException, InterruptedException {
 		emailBox.sendKeys(xUtils.getXmlKeyValue("email"));
+	}
+	
+	public void fillEmailJson() throws Throwable {
+		emailBox.sendKeys(jUtils.getJsonElement("email"));
 	}
 }

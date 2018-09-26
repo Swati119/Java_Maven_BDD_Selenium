@@ -9,7 +9,7 @@ import pages.Dropdown;
 import pages.ForgotPwd;
 import pages.WelcomeToInternet;
 
-public class WelcomeToInternetSteps extends BaseSteps {
+public class PracticeSeleniumSteps extends BaseSteps {
 	WelcomeToInternet welcomePage = new WelcomeToInternet(driver);
 	BasicAuth basicAuth = new BasicAuth(driver);
 	Checkboxes check = new Checkboxes(driver);
@@ -70,7 +70,12 @@ public class WelcomeToInternetSteps extends BaseSteps {
 
 	@Then("^I send email from the xml$")
 	public void i_send_email_from_xml() throws Throwable {
-		frgtPwd.fillEmail();
+		frgtPwd.fillEmailXml();
+	}
+	
+	@Then("^I send email from the json$")
+	public void i_send_email_from_json() throws Throwable {
+		frgtPwd.fillEmailJson();
 	}
 	
 	
