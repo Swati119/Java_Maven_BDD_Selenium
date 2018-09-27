@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.xml.sax.SAXException;
 
+import utils.ExcelUtils;
 import utils.JsonUtils;
 import utils.XmlUtils;
 
@@ -17,6 +18,7 @@ public class ForgotPwd {
 	private WebDriver driver;
 	XmlUtils xUtils = new XmlUtils();
 	JsonUtils jUtils = new JsonUtils();
+	ExcelUtils xlsUtils = new ExcelUtils();
 
 	public ForgotPwd(WebDriver driver) {
 		this.driver = driver;
@@ -32,5 +34,10 @@ public class ForgotPwd {
 	
 	public void fillEmailJson() throws Throwable {
 		emailBox.sendKeys(jUtils.getJsonElement("email"));
+	}
+	
+	public void fillEmailXls() throws Throwable {
+		emailBox.sendKeys(xlsUtils.getCellValue());
+		Thread.sleep(5000);
 	}
 }

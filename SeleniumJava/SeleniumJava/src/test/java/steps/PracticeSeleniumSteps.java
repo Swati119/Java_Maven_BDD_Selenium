@@ -78,5 +78,10 @@ public class PracticeSeleniumSteps extends BaseSteps {
 		frgtPwd.fillEmailJson();
 	}
 	
+	@Then("^I send email from the xls$")
+	public void i_send_email_from_xls() throws Throwable {
+		frgtPwd.fillEmailXls();
+	}
+	
 	
 }

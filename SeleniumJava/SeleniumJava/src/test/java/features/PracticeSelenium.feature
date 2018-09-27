@@ -36,3 +36,9 @@ Feature: Automate the practice website
     Given I launch the test automation website
     When I navigate to the forgot password page
     And I send email from the json
+
+  @xls
+  Scenario: Read xls - automate the practice website
+    Given I launch the test automation website
+    When I navigate to the forgot password page
+    And I send email from the xls
