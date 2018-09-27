@@ -7,6 +7,8 @@ import pages.Checkboxes;
 import pages.ContextMenu;
 import pages.Dropdown;
 import pages.ForgotPwd;
+import pages.Frames;
+import pages.Iframe;
 import pages.WelcomeToInternet;
 
 public class PracticeSeleniumSteps extends BaseSteps {
@@ -16,12 +18,20 @@ public class PracticeSeleniumSteps extends BaseSteps {
 	Dropdown drop = new Dropdown(driver);
 	ContextMenu context = new ContextMenu(driver);
 	ForgotPwd frgtPwd = new ForgotPwd(driver);
+	Frames frames = new Frames(driver);
+	Iframe iframe = new Iframe(driver);
 	
 	@When("^I login with valid credentials$")
 	public void i_login_with_valid_credentials() throws Throwable {
 		// Using the credentials in the URL
 		welcomePage.loginParams();
 	}
+	
+	@Then("^I write something in the iFrame$")
+	public void i_write_thing_iFrame() throws Throwable {
+		iframe.writeInFrame();
+	}
+	
 
 	@Then("^I should see the correct message on page$")
 	public void i_should_see_correct_message_on_page() throws Throwable {
@@ -41,6 +51,16 @@ public class PracticeSeleniumSteps extends BaseSteps {
 	@When("^I navigate to the dropdown page$")
 	public void i_navigate_dropdown_page() throws Throwable {
 		welcomePage.clickDropdownLink();
+	}
+	
+	@When("^I navigate to the frames page$")
+	public void i_navigate_frames_page() throws Throwable {
+		welcomePage.clickFramesLink();
+	}
+	
+	@When("^I navigate to the iFrame page$")
+	public void i_navigate_iframe_page() throws Throwable {
+		frames.clickIFrameLink();
 	}
 
 	@Then("^I should select Option1 from the dropdown list$")

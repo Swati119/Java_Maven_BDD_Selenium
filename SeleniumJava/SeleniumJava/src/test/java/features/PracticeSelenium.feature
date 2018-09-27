@@ -18,6 +18,13 @@ Feature: Automate the practice website
     When I navigate to the dropdown page
     And I should select Option1 from the dropdown list
 
+  @Iframes
+  Scenario: Frames - automate the practice website
+    Given I launch the test automation website
+    When I navigate to the frames page
+    And I navigate to the iFrame page
+    Then I write something in the iFrame
+
   @RightClick
   Scenario: Right click - automate the practice website
     Given I launch the test automation website

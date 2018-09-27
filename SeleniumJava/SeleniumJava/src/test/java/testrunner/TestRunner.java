@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features", 
 					glue = { "steps" },					
-					tags = {"@xls"},
+					tags = {"@Iframes"},
 					plugin= {"pretty", "html:target/cucumber"},
 					monochrome = false)
 public class TestRunner {

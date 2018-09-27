@@ -20,7 +20,10 @@ public class BaseSteps {
 		// initiating driver
 		if (propUtil.getPropValue("browser").equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32\\chromedriver (2).exe");
-			driver = new ChromeDriver();
+			ChromeOptions chromeOpts = new ChromeOptions();
+			//only required when headless execution is required
+			//chromeOpts.addArguments("--headless");
+			driver = new ChromeDriver(chromeOpts);
 		} 
 		else if (propUtil.getPropValue("browser").equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver-v0.22.0-win64\\geckodriver.exe");

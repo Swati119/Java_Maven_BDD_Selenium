@@ -50,6 +50,9 @@ public class WelcomeToInternet {
 	
 	@FindBy(css = "a[href='/forgot_password']")
 	WebElement forgotPwdLink;
+	
+	@FindBy(css = "a[href='/frames']")
+	WebElement framesLink;
 
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
@@ -73,6 +76,10 @@ public class WelcomeToInternet {
 	
 	public void clickForgotPwdLink() {
 		forgotPwdLink.click();
+	}
+	
+	public void clickFramesLink() {
+		framesLink.click();
 	}
 
 	public void getAbTestingText() {
