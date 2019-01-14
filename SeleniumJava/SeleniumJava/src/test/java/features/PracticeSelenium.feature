@@ -4,7 +4,7 @@ Feature: Automate the practice website
   Scenario: Basic authorization - automate the practice website
     Given I launch the test automation website
     When I login with valid credentials
-    Then I should see the correct message on page
+    #Then I should see the correct message on page
 
   @Checkbox
   Scenario: Checkboxes - automate the practice website

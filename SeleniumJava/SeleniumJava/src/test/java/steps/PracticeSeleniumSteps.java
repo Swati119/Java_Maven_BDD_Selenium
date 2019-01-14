@@ -24,7 +24,9 @@ public class PracticeSeleniumSteps extends BaseSteps {
 	@When("^I login with valid credentials$")
 	public void i_login_with_valid_credentials() throws Throwable {
 		// Using the credentials in the URL
-		welcomePage.loginParams();
+		//welcomePage.loginParams();
+		welcomePage.test();
+		Thread.sleep(10000);
 	}
 	
 	@Then("^I write something in the iFrame$")

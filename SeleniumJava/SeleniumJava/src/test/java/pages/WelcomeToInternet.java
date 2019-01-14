@@ -53,6 +53,12 @@ public class WelcomeToInternet {
 	
 	@FindBy(css = "a[href='/frames']")
 	WebElement framesLink;
+	
+	@FindBy(xpath = "//input[@id='Vnd_Id']")
+	WebElement test;
+	
+		 
+
 
 	public void clickOnBasicAuth() {
 		basicAuthLink.click();
@@ -88,9 +94,13 @@ public class WelcomeToInternet {
 	}
 
 	public void launchURL() {
-		driver.get("http://the-internet.herokuapp.com/");
+		driver.get("https://uat.webline.co.uk/WeblineUI/Account/LogOn");
 		System.out.println("Launched");
 
+	}
+	
+	public void test() {
+		test.sendKeys("Ankur");
 	}
 
 	public void loginParams() {
