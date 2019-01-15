@@ -1,7 +1,6 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -13,5 +12,12 @@ public class PropertiesUtils {
 		return prop.getProperty(key);
 
 	}
+	
+	public String getAPIPropValue(String key) throws IOException {
+		prop.load(new FileInputStream("src/test/resources/api.properties"));
+		return prop.getProperty(key);
+
+	}
+	
 
 }

@@ -1,7 +1,5 @@
 package steps;
 
-import org.openqa.selenium.WebDriver;
-
 import cucumber.api.java.en.Given;
 import pages.WelcomeToInternet;
 

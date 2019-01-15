@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.File;
 import java.io.FileReader;
 
 import gherkin.deps.com.google.gson.JsonObject;

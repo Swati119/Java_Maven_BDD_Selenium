@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import utils.PropertiesUtils;
 
 public class BaseSteps {
