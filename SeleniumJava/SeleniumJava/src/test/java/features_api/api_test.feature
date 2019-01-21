@@ -9,7 +9,8 @@ Feature: Ergast developer API
     Given I have the "<baseUrl>" and "<endPoint>"
     When i make a call to the REST API GET request
     Then the HTTP status code from the response should be "<statusCode>"
+    And the circuit numbers is equal to "<circuitNo>"
 
     Examples: 
-      | baseUrl   | endPoint     | statusCode |
-      | ergastDev | 2017circuits |        200 |
+      | baseUrl   | endPoint     | statusCode | circuitNo |
+      | ergastDev | 2017circuits |        200 |        20 |
