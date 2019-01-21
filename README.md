@@ -11,9 +11,15 @@ This is a java maven selenium test automation framework with basic web automatio
 - Excel reading capabilities
 
 #Features of the framework
+* Web/UI testing
 - Supports Page object modelling using PageFactory
 - Uses css for webelement identification
 - Have covered basic scenarios for web automation
 - Maven build project for easy execution
 - Can support headless chrome execution
 - Browsers are configurable through conf.properties file
+
+* API testing
+- Supports Rest API testing using the RestAssured library
+- API end-points are configurable through properties file
+- Supports BDD using Cucumber
