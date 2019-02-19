@@ -4,12 +4,6 @@ This is a java maven selenium test automation framework with basic web automatio
 # Dependencies Included
 - BDD powered by cucumber
 
-# Utilities Included
-- XML reading capabilities
-- Json reading capabilities
-- Properties reading capabilities
-- Excel reading capabilities
-
 # Features of the framework
 
         Web/UI testing
