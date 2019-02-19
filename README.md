@@ -25,3 +25,22 @@ This is a java maven selenium test automation framework with basic web automatio
 - Supports Rest API testing using the RestAssured library
 - API end-points are configurable through properties file
 - Supports BDD using Cucumber
+
+# Utilities and Functions
+ExcelUtils
+ - loadXlsFile
+ - getCellValue
+ 
+ JsonUtils
+ - loadJsonFile
+ - getJsonElement
+ 
+ PropertiesUtils
+ - getPropValue
+ - getAPIPropValue
+ 
+ XmlUtils
+ - loadFile
+ - getXmlKeyValue
+ 
+        
