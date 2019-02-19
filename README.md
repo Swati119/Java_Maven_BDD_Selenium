@@ -1,16 +1,16 @@
 # Java_Maven_BDD_Selenium
 This is a java maven selenium test automation framework with basic web automation scenarios covered though BDD
 
-#Dependencies Included
+# Dependencies Included
 - BDD powered by cucumber
 
-#Utilities Included
+# Utilities Included
 - XML reading capabilities
 - Json reading capabilities
 - Properties reading capabilities
 - Excel reading capabilities
 
-#Features of the framework
+# Features of the framework
 
         Web/UI testing
 - Supports Page object modelling using PageFactory
