@@ -3,6 +3,8 @@ This is a java maven selenium test automation framework with basic web automatio
 
 # Dependencies Included
 - BDD powered by cucumber
+- Rest Assured (io.rest-assured)
+- Apache poi
 
 # Features of the framework
 
